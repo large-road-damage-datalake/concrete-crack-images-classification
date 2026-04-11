@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "basic_info": {
+    "id": "concrete-crack-images-classification",
+    "name": "Concrete Crack Images for Classification",
+    "short_name": "concrete-crack-cls",
+    "description": "Classification packaging of Concrete Crack Images for Classification with image-level labels for cracked and non-cracked concrete surfaces.",
+    "year": 2018
+  },
+  "project_context": {
+    "task": "classification",
+    "tasks": [
+      "classification"
+    ],
+    "damage_types": [
+      "crack",
+      "non-crack"
+    ]
+  },
+  "imaging_setup": {
+    "camera": "High-resolution RGB camera",
+    "resolution": "227x227 RGB image patches",
+    "lighting_conditions": "Variable illumination and surface finish conditions",
+    "capture_height_mm": "Not reported",
+    "geotagged": false
+  },
+  "annotation_schema": [
+    {
+      "type": "classification",
+      "description": "Image-level crack presence labels",
+      "classes": [
+        {
+          "id": 0,
+          "name": "non-cracked",
+          "description": "Concrete surface patch without visible crack",
+          "color": "#00AA00"
+        },
+        {
+          "id": 1,
+          "name": "cracked",
+          "description": "Concrete surface patch containing crack",
+          "color": "#FF0000"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "n_images": 40000,
+    "n_annotations": 40000,
+    "n_images_with_annotations": 40000,
+    "average_annotations_per_image": 1.0,
+    "image_format": "image_folder",
+    "class_distribution": {
+      "cracked": 20000,
+      "non-cracked": 20000
+    },
+    "split": {
+      "data": {
+        "n_images": 40000,
+        "percentage": 1.0
+      }
+    }
+  },
+  "geographic_coverage": {
+    "countries": [
+      {
+        "name": "Turkey",
+        "image_count": 40000
+      }
+    ],
+    "temporal_scope": "Published 2018"
+  },
+  "quality_assurance": {
+    "annotation_quality": "Labels published with Mendeley Data dataset release",
+    "inter_annotator_agreement": "Not reported",
+    "review_status": "Published dataset"
+  },
+  "authors": [
+    {
+      "name": "Caglar Firat Ozgenel",
+      "affiliation": "Middle East Technical University",
+      "role": "Dataset Creator"
+    }
+  ],
+  "license": "CC BY 4.0",
+  "links": {
+    "github": "https://github.com/large-road-damage-datalake/concrete-crack-images-classification",
+    "download": "https://data.mendeley.com/datasets/5y9wdsg2zt/1",
+    "doi": "https://doi.org/10.17632/5y9wdsg2zt.1",
+    "paper": "https://doi.org/10.1109/ICIP.2016.7533052",
+    "homepage": "https://data.mendeley.com/datasets/5y9wdsg2zt/1"
+  },
+  "citation": {
+    "bibtex": "@dataset{ozgenel2018concretecrack,\n  author = {Ozgenel, Caglar Firat},\n  title = {Concrete Crack Images for Classification},\n  year = {2018},\n  publisher = {Mendeley Data},\n  version = {1},\n  doi = {10.17632/5y9wdsg2zt.1},\n  url = {https://doi.org/10.17632/5y9wdsg2zt.1}\n}",
+    "article_bibtex": "@inproceedings{zhang2016roadcrack,\n  title = {Road Crack Detection Using Deep Convolutional Neural Network},\n  author = {Zhang, Lei and Yang, Fan and Zhang, Yimin Daniel and Zhu, Ying Julie},\n  booktitle = {2016 IEEE International Conference on Image Processing (ICIP)},\n  year = {2016},\n  doi = {10.1109/ICIP.2016.7533052}\n}"
+  },
+  "tags": [
+    "classification",
+    "concrete-crack",
+    "civil-infrastructure",
+    "road-damage",
+    "mendeley-data"
+  ],
+  "source_publication": {
+    "dataset_doi": "10.17632/5y9wdsg2zt.1",
+    "article_doi": "10.1109/ICIP.2016.7533052",
+    "article_title": "Road Crack Detection Using Deep Convolutional Neural Network",
+    "journal": "IEEE International Conference on Image Processing (ICIP)",
+    "year": 2016
+  }
+}

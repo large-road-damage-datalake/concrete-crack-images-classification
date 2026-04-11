@@ -1,0 +1,18 @@
+{
+  "type": "matrix",
+  "labels": [
+    "cracked",
+    "non-cracked"
+  ],
+  "data": [
+    [
+      20000,
+      0
+    ],
+    [
+      0,
+      20000
+    ]
+  ],
+  "title": "Class Co-occurrence (images containing class pairs)"
+}

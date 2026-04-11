@@ -1,0 +1,15 @@
+{
+  "total_images": 40000,
+  "total_annotations": 40000,
+  "total_classes": 2,
+  "splits_breakdown": {
+    "data": {
+      "images": 40000,
+      "annotations": 40000,
+      "classes": {
+        "cracked": 20000,
+        "non-cracked": 20000
+      }
+    }
+  }
+}
