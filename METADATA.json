@@ -19,6 +19,9 @@
   },
   "imaging_setup": {
     "camera": "High-resolution RGB camera",
+    "camera_viewpoint": [
+      "top-down"
+    ],
     "resolution": "227x227 RGB image patches",
     "lighting_conditions": "Variable illumination and surface finish conditions",
     "capture_height_mm": "Not reported",
@@ -57,7 +60,9 @@
     "split": {
       "data": {
         "n_images": 40000,
-        "percentage": 1.0
+        "percentage": 1.0,
+        "n_images_with_annotations": 40000,
+        "annotation_coverage": 1.0
       }
     }
   },
@@ -65,7 +70,7 @@
     "countries": [
       {
         "name": "Turkey",
-        "image_count": 40000
+        "image_count": 20000
       }
     ],
     "temporal_scope": "Published 2018"
