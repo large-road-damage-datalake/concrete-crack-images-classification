@@ -25,10 +25,16 @@
     "camera_viewpoint": [
       "top-down"
     ],
-    "resolution": "227x227 RGB image patches",
+    "resolution": "227x227",
     "lighting_conditions": "Variable illumination and surface finish conditions",
     "capture_height_mm": "Not reported",
-    "geotagged": false
+    "geotagged": false,
+    "resolution_details": [
+      {
+        "resolution": "227x227",
+        "count": 40000
+      }
+    ]
   },
   "annotation_schema": [
     {
