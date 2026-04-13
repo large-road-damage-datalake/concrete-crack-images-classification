@@ -15,7 +15,10 @@
     "damage_types": [
       "crack",
       "non-crack"
-    ]
+    ],
+    "task_classification": {
+      "primary_task": "classification"
+    }
   },
   "imaging_setup": {
     "camera": "High-resolution RGB camera",
@@ -52,6 +55,9 @@
     "n_annotations": 40000,
     "n_images_with_annotations": 40000,
     "average_annotations_per_image": 1.0,
+    "dataset_size": "234.09 MB",
+    "dataset_size_bytes": 245462983,
+    "dataset_file_count": 40000,
     "image_format": "image_folder",
     "class_distribution": {
       "cracked": 20000,
@@ -62,7 +68,10 @@
         "n_images": 40000,
         "percentage": 1.0,
         "n_images_with_annotations": 40000,
-        "annotation_coverage": 1.0
+        "annotation_coverage": 1.0,
+        "dataset_size": "234.09 MB",
+        "dataset_size_bytes": 245462983,
+        "dataset_file_count": 40000
       }
     }
   },
