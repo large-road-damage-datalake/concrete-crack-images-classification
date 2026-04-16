@@ -13,12 +13,12 @@
       "classification"
     ],
     "damage_types": [
-      "crack",
-      "non-crack"
+      "crack"
     ],
     "task_classification": {
       "primary_task": "classification"
-    }
+    },
+    "label_taxonomy_version": "road_damage_v1"
   },
   "imaging_setup": {
     "camera": "High-resolution RGB camera",
@@ -45,13 +45,17 @@
           "id": 0,
           "name": "non-cracked",
           "description": "Concrete surface patch without visible crack",
-          "color": "#00AA00"
+          "color": "#00AA00",
+          "canonical_name": "class.negative",
+          "instances": 20000
         },
         {
           "id": 1,
           "name": "cracked",
           "description": "Concrete surface patch containing crack",
-          "color": "#FF0000"
+          "color": "#FF0000",
+          "canonical_name": "crack",
+          "instances": 20000
         }
       ]
     }
@@ -60,7 +64,7 @@
     "n_images": 40000,
     "n_annotations": 40000,
     "n_images_with_annotations": 40000,
-    "average_annotations_per_image": 1.0,
+    "average_annotations_per_image": 1,
     "dataset_size": "234.09 MB",
     "dataset_size_bytes": 245462983,
     "dataset_file_count": 40000,
@@ -72,9 +76,9 @@
     "split": {
       "data": {
         "n_images": 40000,
-        "percentage": 1.0,
+        "percentage": 1,
         "n_images_with_annotations": 40000,
-        "annotation_coverage": 1.0,
+        "annotation_coverage": 1,
         "dataset_size": "234.09 MB",
         "dataset_size_bytes": 245462983,
         "dataset_file_count": 40000
@@ -87,7 +91,7 @@
         "name": "Turkey",
         "image_count": 20000,
         "annotated_image_count": 20000,
-        "annotation_coverage": 1.0
+        "annotation_coverage": 1
       }
     ],
     "temporal_scope": "Published 2018"
@@ -129,5 +133,51 @@
     "article_title": "Road Crack Detection Using Deep Convolutional Neural Network",
     "journal": "IEEE International Conference on Image Processing (ICIP)",
     "year": 2016
+  },
+  "class_taxonomy": {
+    "version": "road_damage_v1",
+    "classes": [
+      {
+        "canonical_name": "class.negative",
+        "display_name": "Negative",
+        "damage_family": "context_non_damage",
+        "damage_subtype": "negative",
+        "role": "negative",
+        "is_damage_target": false,
+        "aliases": [
+          "non-cracked",
+          "negative",
+          "normal",
+          "intact",
+          "healthy"
+        ],
+        "source_labels": [
+          "non-cracked"
+        ],
+        "taxonomy_source": "registry",
+        "taxonomy_unresolved": false
+      },
+      {
+        "canonical_name": "crack",
+        "display_name": "Crack",
+        "damage_family": "crack",
+        "damage_subtype": "generic",
+        "role": "damage_target",
+        "is_damage_target": true,
+        "aliases": [
+          "crack",
+          "cracked"
+        ],
+        "source_labels": [
+          "cracked"
+        ],
+        "taxonomy_source": "registry",
+        "taxonomy_unresolved": false
+      }
+    ],
+    "damage_types": [
+      "crack"
+    ],
+    "unresolved_labels": []
   }
 }
