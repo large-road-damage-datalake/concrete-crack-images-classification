@@ -18,16 +18,16 @@
     "task_classification": {
       "primary_task": "classification"
     },
-    "label_taxonomy_version": "road_damage_v1"
+    "label_taxonomy_version": "road_damage_v2"
   },
   "imaging_setup": {
-    "camera": "High-resolution RGB camera",
+    "camera": "Digital RGB camera",
     "camera_viewpoint": [
       "top-down"
     ],
     "resolution": "227x227",
-    "lighting_conditions": "Variable illumination and surface finish conditions",
-    "capture_height_mm": "Not reported",
+    "lighting_conditions": "Concrete building walls and floors with varied surface finishes (exposed concrete, plaster, paint) and illumination conditions",
+    "capture_height_mm": 1000,
     "geotagged": false,
     "resolution_details": [
       {
@@ -81,9 +81,11 @@
         "annotation_coverage": 1,
         "dataset_size": "234.09 MB",
         "dataset_size_bytes": 245462983,
-        "dataset_file_count": 40000
+        "dataset_file_count": 40000,
+        "annotated": true
       }
-    }
+    },
+    "n_images_in_annotated_splits": 40000
   },
   "geographic_coverage": {
     "countries": [
@@ -94,17 +96,22 @@
         "annotation_coverage": 1
       }
     ],
-    "temporal_scope": "Published 2018"
+    "temporal_scope": "Published 2018 (Mendeley Data v1, 2018-01-15; v2, 2019-07-23); collected at METU Campus, Ankara, Turkey"
   },
   "quality_assurance": {
-    "annotation_quality": "Labels published with Mendeley Data dataset release",
+    "annotation_quality": "Image-level binary labels (20,000 Positive / cracked and 20,000 Negative / non-cracked 227x227 RGB patches) extracted from 458 full-resolution (4032x3024) photographs of concrete walls and floors at METU Campus following the patch-extraction procedure of Zhang et al. (2016) without random rotation or flipping augmentation (the ISARC 2018 paper rounds these figures to 500 source images and 224x224 patches). The source deposit provides no fixed train/val/test split folders (the companion paper uses a random 70/15/15 split). Across the 40,000 files there are 38,402 unique SHA-256 hashes (288 duplicate groups / 316 extra files in cracked, 1,231 duplicate groups / 1,282 extra files in non-cracked, and 0 cross-class duplicates).",
     "inter_annotator_agreement": "Not reported",
-    "review_status": "Published dataset"
+    "review_status": "Published dataset and conference paper"
   },
   "authors": [
     {
-      "name": "Caglar Firat Ozgenel",
-      "affiliation": "Middle East Technical University",
+      "name": "Çağlar Fırat Özgenel",
+      "affiliation": "Department of Architecture, Middle East Technical University",
+      "role": "Dataset Creator"
+    },
+    {
+      "name": "Arzu Gönenç Sorguç",
+      "affiliation": "Department of Architecture, Middle East Technical University",
       "role": "Dataset Creator"
     }
   ],
@@ -113,12 +120,12 @@
     "github": "https://github.com/large-road-damage-datalake/concrete-crack-images-classification",
     "download": "https://data.mendeley.com/datasets/5y9wdsg2zt/1",
     "doi": "https://doi.org/10.17632/5y9wdsg2zt.1",
-    "paper": "https://doi.org/10.1109/ICIP.2016.7533052",
+    "paper": "https://doi.org/10.22260/ISARC2018/0094",
     "homepage": "https://data.mendeley.com/datasets/5y9wdsg2zt/1"
   },
   "citation": {
-    "bibtex": "@dataset{ozgenel2018concretecrack,\n  author = {Ozgenel, Caglar Firat},\n  title = {Concrete Crack Images for Classification},\n  year = {2018},\n  publisher = {Mendeley Data},\n  version = {1},\n  doi = {10.17632/5y9wdsg2zt.1},\n  url = {https://doi.org/10.17632/5y9wdsg2zt.1}\n}",
-    "article_bibtex": "@inproceedings{zhang2016roadcrack,\n  title = {Road Crack Detection Using Deep Convolutional Neural Network},\n  author = {Zhang, Lei and Yang, Fan and Zhang, Yimin Daniel and Zhu, Ying Julie},\n  booktitle = {2016 IEEE International Conference on Image Processing (ICIP)},\n  year = {2016},\n  doi = {10.1109/ICIP.2016.7533052}\n}"
+    "bibtex": "@dataset{ozgenel2018concretecrack,\n  author = {Özgenel, Çağlar Fırat},\n  title = {Concrete Crack Images for Classification},\n  year = {2018},\n  publisher = {Mendeley Data},\n  version = {1},\n  doi = {10.17632/5y9wdsg2zt.1},\n  url = {https://doi.org/10.17632/5y9wdsg2zt.1}\n}",
+    "article_bibtex": "@inproceedings{ozgenel2018isarc,\n  author = {Özgenel, Çağlar Fırat and Gönenç Sorguç, Arzu},\n  title = {Performance Comparison of Pretrained Convolutional Neural Networks on Crack Detection in Buildings},\n  booktitle = {Proceedings of the 35th International Symposium on Automation and Robotics in Construction (ISARC)},\n  pages = {693--700},\n  year = {2018},\n  doi = {10.22260/ISARC2018/0094},\n  url = {https://doi.org/10.22260/ISARC2018/0094}\n}"
   },
   "tags": [
     "classification",
@@ -129,10 +136,10 @@
   ],
   "source_publication": {
     "dataset_doi": "10.17632/5y9wdsg2zt.1",
-    "article_doi": "10.1109/ICIP.2016.7533052",
-    "article_title": "Road Crack Detection Using Deep Convolutional Neural Network",
-    "journal": "IEEE International Conference on Image Processing (ICIP)",
-    "year": 2016
+    "article_doi": "10.22260/ISARC2018/0094",
+    "article_title": "Performance Comparison of Pretrained Convolutional Neural Networks on Crack Detection in Buildings",
+    "journal": "Proceedings of the 35th International Symposium on Automation and Robotics in Construction (ISARC)",
+    "year": 2018
   },
   "class_taxonomy": {
     "version": "road_damage_v2",
@@ -140,7 +147,7 @@
       {
         "canonical_name": "class.negative",
         "display_name": "Negative",
-        "damage_family": "unknown",
+        "damage_family": "non_damage",
         "damage_subtype": "negative",
         "role": "negative",
         "semantic_role": "absence",

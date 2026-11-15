@@ -10,6 +10,7 @@ Concrete Crack Images for Classification is distributed under:
 ## Package Notice
 
 This repository is a task-specific packaging and analytics build based on the source dataset.
-Please preserve attribution to the original author:
+Please preserve attribution to the original authors:
 
-- Caglar Firat Ozgenel
+- Çağlar Fırat Özgenel
+- Arzu Gönenç Sorguç
